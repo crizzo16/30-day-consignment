@@ -21,8 +21,8 @@
     const today = moment().format("MMM Do");
     const thirty = moment().add(-30, 'day').format("MMM Do");
     console.log(today, thirty);
-    document.getElementById("#today-full").innerHTML("test");
-    document.getElementById("#former-date").innerHTML("test2");
+    document.getElementById("#today-full").innerHTML = today;
+    document.getElementById("#former-date").innerHTML = thirty;
   </script>
 </body>
 </html>
