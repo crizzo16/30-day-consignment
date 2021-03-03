@@ -18,11 +18,11 @@
   </div>
   
   <script>
-    const today = moment();
-    const thirty = moment().add(-30, 'day');
-    console.log(moment(today).format("mm/dd/yy"), moment(thirty).format("mm/dd/yy"));
-    document.getElementById("#today-full").innerHTML(moment(today).format("mm/dd/yy"));
-    document.getElementById("#former-date").innerHTML(moment(thirty).format("mm/dd/yy"));
+    const today = moment().format("MMM Do");
+    const thirty = moment().add(-30, 'day').format("MMM Do");
+    console.log(today, thirty);
+    document.getElementById("#today-full").innerHTML("test");
+    document.getElementById("#former-date").innerHTML("test2");
   </script>
 </body>
 </html>
