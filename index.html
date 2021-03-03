@@ -18,8 +18,8 @@
   </div>
   
   <script>
-    const today = Date();
-    const thirty = today.add(-30).days();
+    const today = moment();
+    const thirty = today.add(-30, 'day');
     console.log(today, thirty);
     $("#today-full").text(today.toDateString());
     $("#former-date").text(thirty.toDateString());
