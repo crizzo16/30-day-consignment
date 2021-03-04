@@ -10,20 +10,43 @@
       font-family: "Kumbh Sans", "arial", sans-serif;
       font-size: 2.5em;
     }
+    
+    .flex {
+      display: flex;
+    } 
+    
+    .container {
+      margin: 0px 10%;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .center {
+      text-align: center;
+    }
+    
+    .date-emphasis {
+       color: red;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-        <h2>Today, <span id="today-full"></span>, you can pick up items from <span id="former-date"></span> and later.</h2>
+  <div class="container center">
+        <h2>Today, <span class="date-emphasis" id="today-full"></span>, you can pick up items from <span class="date-emphasis" id="former-date"></span> and later.</h2>
+    <h2>If you want the items for this week, print from <span id="start-date"></span> to <span id="end-date"></span></h2>
   </div>
   
   <script>
     const today = moment().format("MMM Do");
     const thirty = moment().add(-30, 'day').format("MMM Do");
+    const weekday = moment().format("d");
+    const time = -30 + weekday;
+    const endDate = moment().add(time, 'day').format("MMM Do");
     console.log(today, thirty);
     document.getElementById("today-full").innerHTML = today;
     document.getElementById("former-date").innerHTML = thirty;
-    console.log("it stuck");
+    document.getElementById("start-date").innerHTML = thirty;
+    document.getElementById("end-date").innerHTML = endDate;
   </script>
 </body>
 </html>
