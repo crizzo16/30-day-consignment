@@ -40,12 +40,13 @@
     const thirty = moment().add(-30, 'day').format("MMM Do");
     const weekday = parseInt(moment().format("d"));
     const time = -30 + (10 - weekday);
-    const endDate = moment().add(time, 'day').format("MMM Do");
+    const endDate = moment().add(time, 'day').format("MM/D/YYYY");
+    const startDate = moment.add(-30, 'day').format("MM/D/YYYY");
     console.log(time);
     console.log("waiting until tomorrow to see if this is correct still");
     document.getElementById("today-full").innerHTML = today;
     document.getElementById("former-date").innerHTML = thirty;
-    document.getElementById("start-date").innerHTML = thirty;
+    document.getElementById("start-date").innerHTML = startDate;
     document.getElementById("end-date").innerHTML = endDate;
   </script>
 </body>
