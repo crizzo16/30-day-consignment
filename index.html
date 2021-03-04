@@ -41,7 +41,7 @@
     const weekday = parseInt(moment().format("d"));
     const time = -30 + (10 - weekday);
     const endDate = moment().add(time, 'day').format("MM/D/YYYY");
-    const startDate = moment.add(-30, 'day').format("MM/D/YYYY");
+    const startDate = moment().add(-30, 'day').format("MM/D/YYYY");
     console.log(time);
     console.log("waiting until tomorrow to see if this is correct still");
     document.getElementById("today-full").innerHTML = today;
