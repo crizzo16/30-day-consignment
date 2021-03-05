@@ -39,7 +39,7 @@
     const today = moment().format("MMM Do");
     const thirty = moment().add(-30, 'day').format("MMM Do");
     const weekday = parseInt(moment().format("d"));
-    const time = -30 + (10 - weekday);
+    const time = -30 + (8 - weekday);
     const endDate = moment().add(time, 'day').format("MMM Do");
     const startDate = moment().add(-30, 'day').format("MMM Do");
     document.getElementById("today-full").innerHTML = today;
