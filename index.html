@@ -42,7 +42,7 @@
     const time = -30 + (8 - weekday);
     const endDate = moment().add(time, 'day').format("MMM Do");
     const startDate = moment().add(-30, 'day').format("MMM Do");
-    const saturday =moment().add(-30+ 8 - weekday,'day').format("dddd MMM Do");
+    const saturday = moment().add(8 - weekday,'day').format("dddd MMM Do");
     document.getElementById("today-full").innerHTML = today;
     document.getElementById("former-date").innerHTML = thirty;
     document.getElementById("start-date").innerHTML = startDate;
